@@ -1,0 +1,20 @@
+create table CompanyRequirements
+(
+Id int identity(1,1) primary key,
+Company_Id int foreign key references Company(Id),
+Requested_Month varchar(20),
+City varchar(20),
+Is_Doc_Verified bit,
+Requirement_Doc_Path varchar(40),
+No_Of_Engg int,
+Tech_Stack_Id int foreign key references TechStack(Id),
+Tech_Type_Id int foreign key references TechType(Id),
+Maker_Program_Id int foreign key references MakerProgram(Id),
+Lead_Id int foreign key references Mentor(Id),
+Ideation_Engg_Id int foreign key references Mentor(Id),
+Buddy_Engg_Id int foreign key references Mentor(Id),
+Special_Remark varchar(30),
+Status varchar(20),
+Creator_Stamp varchar(20),
+Creator_User varchar(20),
+)
